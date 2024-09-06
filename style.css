@@ -391,7 +391,7 @@ input[type='checkbox'] {
     background-color: transparent;
     color: white;
     border: none;
-    background-image: url('/images/case-studies.jpg');
+    background-image: url('images/case-studies.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
