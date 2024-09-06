@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The AI Music Hub - User Study</title>
+
+    <!-- Bootstrap setup -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Adding chart.js library for data visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="main-section">
+        <div class="container-fluid g-0">
+            <!-- Nav Bar -->
+            <div class="col-lg-3">
+                <div class="navigation-bar">
+                    <div class="brand-logo">
+                        <img src="/images/headphones-2.png" alt="Soundwise Icon" class="icon">
+                        <span class="brand-name">Soundwise</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/home.png" alt="Home Icon" class="menu-icon"> Home
+                            </span>
+                        </a>
+                        <a href="legality.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/legality.png" alt="Legality Icon" class="menu-icon"> Legality Insights
+                            </span>
+                        </a>
+                        <a href="ethics.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/ethics.png" alt="Ethics Icon" class="menu-icon"> Ethics Insights
+                            </span>
+                        </a>
+                        <a href="user-study.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/user-study.png" alt="User Study Icon" class="menu-icon"> User Study
+                            </span>
+                        </a>
+                        <a href="learn-more.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/learn-more.png" alt="Learn Icon" class="menu-icon"> Learn More
+                            </span>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Main Section -->
+            <div class="col-lg-9">
+                <div class="user-study-content">
+                    <h2 class="user-study-title">User Study</h2>
+                    <p>Here you can explore key findings from a University of Glasgow MSc Project Study on public
+                        perceptions of AI-generated music, with a focus on how younger generations view its ethical and
+                        legal aspects. These insights provide a fresh perspective, complementing existing research.</p>
+
+                    <!-- General Knowledge & Awareness -->
+                    <div class="user-study-insight-section">
+                        <h3>General Knowledge & Awareness</h3>
+                        <div class="user-study-insight-box d-flex">
+                            <!-- Chart and Description Section -->
+                            <div class="knowledge-awareness-chart col-md-4">
+                                <canvas id="familiarityChart"></canvas>
+                                <p class="new-chart-description">
+                                    A significant portion of respondents (55%) are at least somewhat familiar with the
+                                    application of AI in music creation, but 25% are not familiar at all. This indicates
+                                    a moderate level of awareness, with potential for further education on AI's role in
+                                    the music industry.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="vertical-divider"></div>
+
+
+                            <!-- Rare Use Section -->
+                            <div class="knowledge-awareness-text d-flex">
+                                <div class="text-content-study flex-grow-1">
+                                    <h4>Rare Use of AI in Music Creation Processes?</h4>
+                                    <p>
+                                        Many respondents underestimate the role of AI in music creation processes, with
+                                        many believing AI is rarely used in areas like composing new music, mastering,
+                                        production, and lyric writing, despite its prevalence. This highlights a
+                                        <strong>gap between the actual use of AI in music creation and public
+                                            perception.</strong>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Divider -->
+                            <div class="vertical-divider"></div>
+
+                            <!-- Detailed Statistics Section -->
+                            <div class="detailed-knowledge-awareness-stats col-md-4">
+                                <div class="detailed-stats-row">
+                                    <div class="detailed-stat-column">
+                                        <span class="detailed-stat-value">70%</span>
+                                        <p class="detailed-stat-item">
+                                            of respondents listened to music that they know
+                                            was AI-generated, showing that AI-created content is becoming more common
+                                            and
+                                            recognizable.
+                                        </p>
+                                    </div>
+                                    <div class="detailed-stat-column">
+                                        <span class="detailed-stat-value">90%</span>
+                                        <p class="detailed-stat-item">
+                                            of respondents learned about AI-generated music via social media,
+                                            underscoring the role of digital platforms in shaping public knowledge and
+                                            perceptions.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="detailed-icons-row">
+                                    <img src="/images/instagram.png" alt="Stat Icon" class="detailed-stat-icon">
+                                    <img src="/images/tiktok.png" alt="Stat Icon" class="detailed-stat-icon">
+                                    <img src="/images/facebook.png" alt="Stat Icon" class="detailed-stat-icon">
+                                    <img src="/images/youtube.png" alt="Stat Icon" class="detailed-stat-icon">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Sentiments & Experiences -->
+                    <div class="unique-user-study-sentiments-section">
+                        <h3>Sentiments & Experiences</h3>
+                        <div class="unique-user-study-sentiments-box d-flex" id="user-sentiments-experiences">
+                            <!-- Left Box -->
+                            <div class="unique-sentiments-left-box col-md-3">
+                                <p class="unique-sentiments-stat-item">
+                                    <span class="unique-sentiments-stat-value">55%</span> of respondents sometimes or
+                                    often encounter AI-generated music without realizing it, indicating that AI’s
+                                    integration into music is subtle but widespread on social media platforms.
+                                </p>
+                                <p class="unique-sentiments-stat-item">
+                                    <span class="unique-sentiments-stat-value">60%</span> of respondents find it
+                                    difficult to distinguish between AI-generated and human-created music, reflecting
+                                    AI's growing sophistication in mimicking human creativity.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="vertical-divider"></div>
+
+                            <!-- Middle Box with Bar Chart -->
+                            <div class="unique-sentiments-middle-box col-md-6">
+                                <canvas id="uniqueSentimentsBarChart"></canvas>
+                                <p class="unique-sentiments-chart-description">
+                                    There is notable concern (50%) about the legal and ethical implications of
+                                    AI-generated music, compared to 25% who are unconcerned.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="vertical-divider"></div>
+
+                            <!-- Right Box -->
+                            <div class="unique-sentiments-right-box col-md-3">
+                                <h4>How Does AI Impact Perceptions and Support for Music?</h4>
+                                <ul class="unique-sentiments-list">
+                                    <li><strong>55%</strong> believe enjoyment of a song might diminish if it’s
+                                        AI-generated, highlighting the importance of perceived authenticity.</li>
+                                    <li><strong>55%</strong> think undisclosed AI use by artists could lower respect,
+                                        emphasizing the need for transparency in music creation.</li>
+                                    <li><strong>60%</strong> are less willing to support AI music involving copyright
+                                        infringement, stressing ethical concerns in AI music production.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Future & Responsible Practices -->
+                    <div class="row mt-5">
+                        <div class="col-md-9 d-flex align-items-stretch">
+                            <div class="w-100">
+                                <h4 class="study-box-title">Future & Responsible Practices</h4>
+                                <div class="study-insight-box d-flex align-items-stretch">
+                                    <div class="study-chart-box w-50" id="aiContributionChartContainer">
+                                        <canvas id="aiContributionChart"></canvas>
+                                        <div class="new-chart-description">
+                                            <p>An overwhelming 90% of respondents believe AI will play a significant
+                                                role in music creation over the next decade, either as a co-creator or
+                                                an autonomous creator.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="separator"></div>
+
+                                    <div class="study-chart-box w-50" id="aiRegulationChartContainer">
+                                        <canvas id="aiRegulationChart"></canvas>
+                                        <div class="new-chart-description">
+                                            <p>A strong majority (85%) believe that specific regulations are necessary
+                                                to govern AI in music creation, indicating a widespread call for
+                                                structured oversight.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="study-card">
+                                <div class="study-card-front green-background">
+                                    <div class="study-card-text">
+                                        <p class="study-card-title">Key Legal & Ethical Priorities</p>
+                                        <p class="study-card-subtitle">according to respondents</p>
+                                    </div>
+                                </div>
+                                <div class="study-card-back">
+                                    <div class="text-container">
+                                        <p>Based on the survey results, respondents consistently rated these few practices as important or very important for addressing legal and ethical issues in AI-generated music: clear labeling of AI-generated content, proper licensing for copyrighted music in AI training, appropriate credit for original artists, strong ethical guidelines, fair compensation for artists whose work is used in AI, and public education to raise awareness about AI's role in music.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to the external JavaScript files -->
+    <script src="other.js"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>

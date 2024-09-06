@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The AI Music Hub - Ethics</title>
+
+    <!-- Bootstrap setup -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Adding chart.js library for data visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="main-section">
+        <div class="container-fluid g-0">
+            <!-- Nav Bar -->
+            <div class="col-lg-3">
+                <div class="navigation-bar">
+                    <div class="brand-logo">
+                        <img src="/images/headphones-2.png" alt="Soundwise Icon" class="icon">
+                        <span class="brand-name">Soundwise</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/home.png" alt="Home Icon" class="menu-icon"> Home
+                            </span>
+                        </a>
+                        <a href="legality.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/legality.png" alt="Legality Icon" class="menu-icon"> Legality Insights
+                            </span>
+                        </a>
+                        <a href="ethics.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/ethics.png" alt="Ethics Icon" class="menu-icon"> Ethics Insights
+                            </span>
+                        </a>
+                        <a href="user-study.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/user-study.png" alt="User Study Icon" class="menu-icon"> User Study
+                            </span>
+                        </a>
+                        <a href="learn-more.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/learn-more.png" alt="Learn Icon" class="menu-icon"> Learn More
+                            </span>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Main Section -->
+            <div class="col-lg-9">
+                <div class="main-content">
+                    <h2>Ethics of AI Music</h2>
+                    <p>AI-generated music raises complex ethical concerns, including transparency, accountability,
+                        effects on human creativity and jobs, and cultural appropriation. As AI increasingly shapes
+                        music creation, it’s crucial to address these challenges to ensure technology supports rather
+                        than diminishes human artistry and cultural diversity.
+                        <button id="ethicsLearnMoreButton" class="btn btn-secondary small-btn"
+                            onclick="openEthicsPopup()">Learn More</button>
+                    </p>
+
+                    <!-- First Row -->
+                    <div class="row mt-5">
+                        <div class="col-md-4 d-flex align-items-stretch">
+                            <div class="w-100">
+                                <h4 class="ethics-box-title">Current trends in AI use</h4>
+                                <div class="ethics-insight-box d-flex">
+                                    <div class="ethics-half-box">
+                                        <div class="ethics-percentage">72%</div>
+                                        <p class="ethics-description">of leading music producers utilize AI-driven music
+                                            creation tools.</p>
+                                        <div class="ethics-icon-container">
+                                            <img src="/images/ethics-icon1.png" alt="AI Music Icon 1"
+                                                class="ethics-icon">
+                                        </div>
+                                    </div>
+                                    <div class="ethics-half-box">
+                                        <div class="ethics-percentage">45%</div>
+                                        <p class="ethics-description">of independent musicians utilize AI to improve
+                                            their creative process.</p>
+                                        <div class="ethics-icon-container">
+                                            <img src="images/ethics-icon2.png" alt="AI Music Icon 2"
+                                                class="ethics-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-flex align-items-stretch">
+                            <div class="w-100">
+                                <h4 class="ethics-box-title">Transparency & Accountability</h4>
+                                <div class="ethics-insight-box d-flex align-items-stretch">
+                                    <div class="ethics-chart-box w-50">
+                                        <canvas id="transparencyDoughnutChart"></canvas>
+                                        <div class="chart-description">
+                                            <ul>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #5c0000;"></span> 95% Agree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #bb4a3d;"></span> 2% Disagree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #d08989;"></span> 3% Didn't Answer
+                                                </li>
+                                            </ul>
+                                            <p>Most surveyed GEMA & SACEM members agree AI providers should disclose when copyrighted works are used for training.</p>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="ethics-chart-box w-50">
+                                        <canvas id="transparencyBarChart"></canvas>
+                                        <div class="chart-description">
+                                            <ul>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #5c0000;"></span> 83% Agree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #bb4a3d;"></span> 5% Disagree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #d08989;"></span> 12% Don't Know</li>
+                                            </ul>
+                                            <p>Majority of UK adults agree that if AI has been used to generate a song,
+                                                it
+                                                should be clearly labelled.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Row -->
+                    <div class="row mt-5">
+                        <div class="col-md-9 d-flex align-items-stretch">
+                            <div class="w-100">
+                                <h4 class="ethics-box-title">Impact on Human Creativity & Employment</h4>
+                                <div class="ethics-insight-box d-flex align-items-stretch">
+                                    <div class="ethics-chart-box w-50" id="impactBarChartContainer">
+                                        <canvas id="impactBarChartCanvas"></canvas> 
+                                        <div class="new-chart-description">
+                                            <p>71% of the surveyed music authors and creators in France and Germany fear
+                                                that the use of AI in music could lead to a situation where creators can
+                                                no longer make a living from their work, indicating a significant
+                                                ethical concern about job displacement and the devaluation of human
+                                                creativity.</p>
+                                        </div>
+                                    </div>
+                                    <div class="separator"></div>
+                                    <div class="ethics-chart-box w-50">
+                                        <canvas id="creativityPieChart"></canvas>
+                                        <div class="chart-description">
+                                            <ul>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #5c0000;"></span> 69% Concerned</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #bb4a3d;"></span> 22% Unconcerned</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #d08989;"></span> 9% Don't Know</li>
+                                            </ul>
+                                            <p>Over two-thirds of adults in the UK are concerned about the risk of
+                                                AI-generated music eventually replacing human creativity.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-stretch">
+                            <div class="ethics-card">
+                                <div class="ethics-card-front">
+                                    <div class="ethics-card-image">
+                                        <img src="/images/ethics-music-producers.jpg" alt="Background Image">
+                                    </div>
+                                    <div class="ethics-card-text">
+                                        <p>What do the music producers think?</p>
+                                    </div>
+                                </div>
+                                <div class="ethics-card-back">
+                                    <div class="percentage-container">
+                                        <div class="percentage-box">
+                                            <div class="percentage">29.7%</div>
+                                            <p>of surveyed music producers fear AI tools could reduce creativity and originality,
+                                                overshadowing and devaluing human artistry.</p>
+                                        </div>
+                                        <div class="percentage-box">
+                                            <div class="percentage">73.1%</div>
+                                            <p>of surveyed producers believe AI music generators could partially replace human producers,
+                                                highlighting the potential threat to traditional music industry jobs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethics Popup Overlay -->
+    <div id="ethicsPopup" class="popup-overlay-legal">
+        <div class="popup-content-legal">
+            <div class="popup-header-legal">
+                <h3 class="popup-title">What are the key ethical concerns in AI-generated music?</h3>
+                <button class="close-popup-legal" onclick="closeEthicsPopup()">&times;</button>
+            </div>
+            <div class="popup-body-legal">
+                <p><strong>1. Transparency & Accountability</strong><br>
+                    Transparency in AI music means making the design and decision-making processes of AI systems clear
+                    and open. It’s essential that everyone—musicians, stakeholders, and the public—knows when AI is used
+                    in activities like curating playlists or composing music. This includes explaining how data is used,
+                    how decisions are made, and why. Accountability is also key, requiring those who create and use AI
+                    systems to follow ethical standards, document important decisions, and allow for external reviews.
+                    If something goes wrong, they must take responsibility and fix the issues. Ensuring AI systems
+                    respect privacy, intellectual property, and cultural sensitivity is critical, and addressing any
+                    biases helps build trust in AI-generated content.
+                </p>
+                <p><strong>2. Impact on Human Creativity & Employment</strong><br>
+                    AI's ability to create music that matches or even exceeds human compositions raises concerns about
+                    the impact on human creativity. There is a worry that AI-generated music might flood the market,
+                    overshadowing music created by humans and reducing the value placed on the unique creativity that
+                    only people can bring. Ethical considerations should ensure that AI is used to enhance, not replace,
+                    human creativity. This also includes concerns about job displacement, as AI could reduce the need
+                    for human composers and performers, threatening the livelihoods of those who have devoted their
+                    lives to music.
+                </p>
+                <p><strong>3. Cultural Impact & Appropriation</strong><br>
+                    Music is deeply connected to culture, with artists reflecting their unique cultural backgrounds in
+                    their work. However, AI-generated music could harm this diversity, leading to a more uniform global
+                    music scene that lacks the richness and variety that comes from genuine human experiences. There’s
+                    also a risk that AI might create music that seems culturally rich but lacks a true connection to the
+                    culture it represents, raising questions about its authenticity. Additionally, AI might replicate or
+                    borrow from different cultures without proper acknowledgment, leading to cultural appropriation.
+                    This makes it important to design AI systems that are sensitive to cultural diversity and avoid
+                    exploiting cultural elements without respect or compensation.
+                </p>
+                <p>Understanding these ethical implications is crucial to ensuring that AI supports the music industry
+                    in a way that enhances human creativity and respects cultural diversity.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript files -->
+    <script src="other.js"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>

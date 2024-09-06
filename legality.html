@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The AI Music Hub</title>
+
+    <!-- Bootstrap setup -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Adding chart.js library for data visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="main-section">
+        <div class="container-fluid g-0">
+            <!-- Nav Bar -->
+            <div class="col-lg-3">
+                <div class="navigation-bar">
+                    <div class="brand-logo">
+                        <img src="/images/headphones-2.png" alt="Soundwise Icon" class="icon">
+                        <span class="brand-name">Soundwise</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/home.png" alt="Home Icon" class="menu-icon"> Home
+                            </span>
+                        </a>
+                        <a href="legality.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/legality.png" alt="Legality Icon" class="menu-icon"> Legality Insights
+                            </span>
+                        </a>
+                        <a href="ethics.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/ethics.png" alt="Ethics Icon" class="menu-icon"> Ethics Insights
+                            </span>
+                        </a>
+                        <a href="user-study.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/user-study.png" alt="User Study Icon" class="menu-icon"> User Study
+                            </span>
+                        </a>
+                        <a href="learn-more.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/learn-more.png" alt="Learn Icon" class="menu-icon"> Learn More
+                            </span>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+
+            <!-- Main Section -->
+            <div class="col-lg-9">
+                <div class="main-content">
+                    <h2>Legality of AI Music</h2>
+                    <p>The legal landscape of AI-generated music is complex and evolving, with key issues surrounding
+                        copyright, ownership, royalties, and the use of training data. Understanding these issues is crucial for navigating the
+                        future of AI in music creation.
+                        <button class="btn btn-secondary small-btn" onclick="openLegalPopup()">Learn More</button>
+                    </p>
+
+                    <!-- Row 1 -->
+                    <div class="row mt-5">
+                        <!-- First Box: Revenue & Financial Impact -->
+                        <div class="col-md-5">
+                            <h4 class="box-title">Revenue & Financial Impact</h4>
+                            <div class="insight-box large-box">
+                                <div class="row g-0">
+                                    <div class="col-4">
+                                        <div class="image-container">
+                                            <img src="images/german.png" alt="Germany Icon" class="icon-large">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="content-container">
+                                            <div class="percentage">
+                                                <img src="images/money.png" alt="Money Icon" class="icon">
+                                                <span>27%</span>
+                                            </div>
+                                            <p class="small-text">of revenue for music creators in Germany & France
+                                                could be at risk due to generative AI by 2028. This translates to
+                                                an est. loss of €950 million in 2028 alone, with a total potential
+                                                loss of approx. €2.7 billion between 2023-2028.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Box: Public Concern about Financial Impact & Artist Rights -->
+                        <div class="col-md-7">
+                            <h4 class="box-title">Public Concern about Financial Impact & Artist Rights</h4>
+                            <div class="insight-box wider-box">
+                                <div class="row g-0">
+                                    <div class="col-2">
+                                        <div class="image-container">
+                                            <img src="images/uk.png" alt="UK Icon" class="icon-large">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="content-container">
+                                            <div class="percentage">
+                                                <img src="images/thief.png" alt="Thief Icon" class="icon">
+                                                <span>77%</span>
+                                            </div>
+                                            <p class="small-text">of UK adults agree that AI-generated music
+                                                that does not acknowledge original music's creators amounts to
+                                                theft.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="chart-container">
+                                            <canvas id="myPieChart"></canvas>
+                                            <div class="chart-description">
+                                                <ul>
+                                                    <li><span class="legend-color"
+                                                            style="background-color: #7D3C98;"></span> 68% Concerned</li>
+                                                    <li><span class="legend-color"
+                                                            style="background-color: #154360;"></span>21% Unconcerned</li>
+                                                    <li><span class="legend-color"
+                                                            style="background-color: #85C1E9;"></span> 11% Don't Know</li>
+                                                </ul>
+                                                <p>This chart depicts the UK public's concern about music artists losing
+                                                    out financially as a result of AI-generated music.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <h4 class="box-title">Legal Protection and Copyright</h4>
+                            <div class="insight-box d-flex">
+                                <!-- First Half: Pie Chart -->
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="chart-container d-flex align-items-center">
+                                        <canvas id="legalPieChart"></canvas>
+                                        <div class="chart-description">
+                                            <ul>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #6a0dad;"></span> 80% Agree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #000080;"></span> 7% Disagree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #add8e6;"></span> 14% Don't Know</li>
+                                            </ul>
+                                            <p>This chart depicts the UK public's opinion on whether the law should
+                                                prevent an artist’s music from being used to train AI without their
+                                                knowledge or permission.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Separator Line -->
+                                <div class="separator"></div>
+
+                                <!-- Second Half: Bar Chart -->
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="chart-container d-flex align-items-center">
+                                        <canvas id="legalBarChart"></canvas>
+                                        <div class="chart-description">
+                                            <ul>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #6a0dad;"></span> 61% Agree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #000080;"></span> 14% Disagree</li>
+                                                <li><span class="legend-color"
+                                                        style="background-color: #add8e6;"></span> 25% Don't Know</li>
+                                            </ul>
+                                            <p>This chart shows the UK public's stance on whether legal ownership should
+                                                only apply to creative works made by humans, not AI.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Legality Popup Overlay -->
+    <div id="legalPopup" class="popup-overlay-legal">
+        <div class="popup-content-legal">
+            <div class="popup-header-legal">
+                <h3 class="popup-title">What are the key legal challenges in AI-generated music?</h3>
+                <button class="close-popup-legal" onclick="closeLegalPopup()">&times;</button>
+            </div>
+            <div class="popup-body-legal">
+                <p>As AI-generated music gains popularity, the legal landscape becomes increasingly complex and
+                    uncertain. Four key areas require attention:</p>
+                <p><strong>1. Copyright Infringement</strong><br>
+                    AI-generated music often risks copyright infringement, especially when the outputs resemble existing
+                    copyrighted works. The U.S. Copyright Office defines infringement as the unauthorized reproduction,
+                    distribution, performance, display, or creation of derivative works. AI music can blur these
+                    boundaries, particularly when it replicates elements like chord progressions or melodies. To prove
+                    infringement, it must be shown that the AI had access to the original work and produced something
+                    substantially similar. This presents a challenge in balancing technological innovation with the
+                    protection of original creators’ rights.
+                </p>
+                <p><strong>2. Use & Management of Training Data</strong><br>
+                    Training AI models to generate music requires vast datasets, often including copyrighted material.
+                    This process involves creating digital copies of existing works, raising concerns about potential
+                    infringement. The legality of this practice largely depends on the "fair use" doctrine, which
+                    evaluates factors such as the purpose of use and its effect on the market value of the original
+                    works. An additional challenge is overfitting, where AI models produce outputs too closely mirroring
+                    the training data. This can lead to outputs that directly copy specific elements like melodies or
+                    rhythms, which are protected under copyright law.
+                </p>
+                <p><strong>3. Ownership Rights</strong><br>
+                    The issue of ownership in AI-generated music is complicated by traditional copyright law, which
+                    requires human authorship. AI, being non-human, cannot legally hold copyrights, raising questions
+                    about who owns the rights to the music it creates: the programmer, the user, or another party? The
+                    extent of human involvement, such as setting parameters or providing initial input, further
+                    complicates this issue. Legal ambiguity exists in determining whether AI-generated music meets the
+                    required originality and creativity standards for copyright protection, and if so, who should be
+                    recognized as the rightful owner.
+                </p>
+                <p><strong>4. Royalties & Compensation</strong><br>
+                    Determining royalties and compensation for AI-generated music is difficult due to the unclear role
+                    of human contribution. AI relies heavily on human-created data for training, leading to questions
+                    about whether original creators should be compensated when their works influence AI outputs. The
+                    U.S. Copyright Office excludes AI-generated works from copyright protection and royalties, creating
+                    a gap in compensation. New licensing schemes have been proposed to ensure that human creators
+                    receive fair compensation when their works contribute to AI-generated music. These schemes might
+                    involve tracking the use of copyrighted material in AI training and outputs, helping to protect the
+                    financial interests of human creators and sustain incentives for creating original music.
+                </p>
+                <p>Understanding these legal complexities is crucial for anyone involved in AI music, from developers to
+                    artists, as the technology continues to evolve.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript files -->
+    <script src="other.js"></script>
+    <script src="chart.js"></script>
+</body>
+
+</html>

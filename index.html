@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>The AI Music Hub</title>
+
+    <!-- Bootstrap setup -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Adding chart.js library for data vizualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <section id="main-section">
+        <div class="container-fluid g-0">
+            <!-- Nav Bar -->
+            <div class="col-lg-3">
+                <div class="navigation-bar">
+                    <div class="brand-logo">
+                        <img src="/images/headphones-2.png" alt="Soundwise Icon" class="icon">
+                        <span class="brand-name">Soundwise</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/home.png" alt="Home Icon" class="menu-icon"> Home
+                            </span>
+                        </a>
+                        <a href="legality.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/legality.png" alt="Legality Icon" class="menu-icon"> Legality Insights
+                            </span>
+                        </a>
+                        <a href="ethics.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/ethics.png" alt="Ethics Icon" class="menu-icon"> Ethics Insights
+                            </span>
+                        </a>
+                        <a href="user-study.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/user-study.png" alt="User Study Icon" class="menu-icon"> User Study
+                            </span>
+                        </a>
+                        <a href="learn-more.html" class="btn btn-primary button">
+                            <span class="button-content">
+                                <img src="images/learn-more.png" alt="Learn Icon" class="menu-icon"> Learn More
+                            </span>
+                        </a>
+                    </div>                    
+                </div>
+            </div>
+
+
+            <!-- Main Section -->
+            <div class="col-lg-9">
+                <div class="main-content">
+                    <h1>The AI Music Hub</h1>
+                    <h2>Ethics & Legality</h2>
+                    <p>Welcome to the AI Music Ethics Dashboard, your hub for exploring AI's role in music. This
+                        platform informs and raises awareness about the ethical and legal issues of AI-generated music.
+                        Discover AI's impact, explore key legal and ethical topics, and learn from real-world case
+                        studies to navigate this evolving landscape.
+
+                    </p>
+                    <div class="content-boxes">
+                        <div class="wrap-collabsible">
+                            <input id="collapsible1" class="toggle" type="checkbox">
+                            <label for="collapsible1" class="lbl-toggle">What is AI Music?</label>
+                            <div class="collapsible-content">
+                                <div class="content-inner">
+                                    <p>AI music is created, composed, or enhanced using artificial intelligence
+                                        technologies. It can range from generating entirely new songs to assisting
+                                        musicians in the creative process. By analyzing large datasets of existing
+                                        music, AI identifies patterns in melody, harmony, and rhythm to produce new
+                                        compositions or improve existing ones. Techniques like Machine Learning, Deep
+                                        Learning, and Generative Adversarial Networks are used to create music that
+                                        mimics human-made compositions. AI can also generate lyrics with Natural
+                                        Language Processing, aligning them with specific themes. This process often
+                                        involves training models on extensive datasets of music, raising important
+                                        ethical and legal questions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap-collabsible">
+                            <input id="collapsible2" class="toggle" type="checkbox">
+                            <label for="collapsible2" class="lbl-toggle">Legality & Ethics</label>
+                            <div class="collapsible-content">
+                                <div class="content-inner">
+                                    <p>The legality and ethics of AI-generated music focus on a few key areas. Legally,
+                                        there are questions about copyright and ownership—specifically, whether using
+                                        existing music to train AI models is allowed, and who owns the music that AI
+                                        creates. Ethically, there's concern about the impact on human musicians, as AI
+                                        could replace or overshadow their work, and about cultural sensitivity, as AI
+                                        might replicate styles from different cultures without proper respect.
+                                        Transparency and accountability are important to ensure that the use of AI in
+                                        music is fair and ethical as the technology continues to evolve. Learn more on
+                                        the other pages of this Hub.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-content">
+                        <div class="did-you-know-section">
+                            <h3 class="did-you-know">Did you know?</h3>
+                            <p>Discover the latest trends and statistics that reveal the growing impact of AI in the
+                                music industry.</p>
+                            <div class="statistics">
+                                <div class="stat">
+                                    <div class="circle">
+                                        59.5%
+                                        <div class="small-circle">
+                                            <img src="images/artist.png" alt="Icon 1">
+                                        </div>
+                                    </div>
+                                    <p>of artists are already using AI in their music projects.
+                                        <br><span class="source-text">Source: Survey (2023) by Ditto Music</span>
+                                    </p>
+                                </div>
+                                <div class="stat">
+                                    <div class="circle">
+                                        118 mil
+                                        <div class="small-circle">
+                                            <img src="images/music-album.png" alt="Icon 2">
+                                        </div>
+                                    </div>
+                                    <p>cumulative AI-generated tracks were produced by platforms Mubert and Boomy as of
+                                        December 2023, surpassing the entire Spotify catalog.
+                                        <br><span class="source-text">Source: Study (2024) by Goldmedia</span>
+                                    </p>
+                                </div>
+                                <div class="stat">
+                                    <div class="circle">
+                                        60%
+                                        <div class="small-circle">
+                                            <img src="images/growth.png" alt="Icon 3">
+                                        </div>
+                                    </div>
+                                    <p>annual growth rate projected for the generative AI music market from 2023 to
+                                        2028, reaching over $3 billion by 2028.
+                                        <br><span class="source-text">Source: Study (2024) by Goldmedia</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="case-studies">
+                            <h3>Case Studies</h3>
+                            <p>Explore key controversies in AI-generated music.</p>
+                            <button class="btn btn-secondary" onclick="openPopup()">View Case Studies</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Case Studies Popup -->
+    <div id="caseStudiesPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2 id="caseStudyTitle">Case Study Title</h2>
+                <button class="close-popup" onclick="closePopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="case-study-image">
+                    <img id="caseStudyImage" src="images/default-image.jpg" alt="Case Study Image">
+                </div>
+                <div class="case-study-text">
+                    <p id="caseStudyDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="arrow left-arrow" onclick="prevCaseStudy()">&#10094;</button>
+                <div class="progress-dots">
+                    <span class="dot" onclick="currentCaseStudy(1)"></span>
+                    <span class="dot" onclick="currentCaseStudy(2)"></span>
+                    <span class="dot" onclick="currentCaseStudy(3)"></span>
+                    <span class="dot" onclick="currentCaseStudy(4)"></span>
+                    <span class="dot" onclick="currentCaseStudy(5)"></span>
+                </div>
+                <button class="arrow right-arrow" onclick="nextCaseStudy()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="other.js"></script>
+</body>
+
+</html>
